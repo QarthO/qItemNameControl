@@ -1,0 +1,4 @@
+name: qItemNameControl
+version: '${project.version}'
+main: gg.quartzdev.qitemnamecontrol.qItemNameControl
+api-version: '1.20'
