@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdfde42d-2ee1-49db-a15c-00ef7e4dac47" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/gg/quartzdev/qitemnamecontrol/listener/ItemRenameListener.java" afterDir="false" />
+    <list default="true" id="bdfde42d-2ee1-49db-a15c-00ef7e4dac47" name="Changes" comment="added itemname util">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gg/quartzdev/qitemnamecontrol/ItemNameUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gg/quartzdev/qitemnamecontrol/ItemNameUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gg/quartzdev/qitemnamecontrol/listener/ItemRenameListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gg/quartzdev/qitemnamecontrol/listener/ItemRenameListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gg/quartzdev/qitemnamecontrol/qItemNameControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gg/quartzdev/qitemnamecontrol/qItemNameControl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +26,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "QarthO"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="45faca7f-45b1-4ec1-9554-5ad303d236d0" />
+        <option name="url" value="https://github.com/QarthO/qItemNameControl.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -36,15 +53,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
-    <configuration name="qItemNameControl package" type="MavenRunConfiguration" factoryName="Maven">
+    <configuration name="make jar" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -56,6 +74,7 @@
             </option>
             <option name="goals">
               <list>
+                <option value="clean" />
                 <option value="package" />
               </list>
             </option>
@@ -99,7 +118,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700037613100</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added itemname util">
+      <option name="closed" value="true" />
+      <created>1700039391085</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1700039391085</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -115,6 +142,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="added itemname util" />
+    <option name="LAST_COMMIT_MESSAGE" value="added itemname util" />
   </component>
 </project>

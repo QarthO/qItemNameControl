@@ -2,34 +2,51 @@ package gg.quartzdev.qitemnamecontrol;
 
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.minimessage.MiniMessage;
-import org.bukkit.Bukkit;
+import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.persistence.PersistentDataContainer;
+import org.bukkit.persistence.PersistentDataType;
 
 public class ItemNameUtil {
 
-    private static String getItemName(ItemStack item){
-
-        String name = item.getType().name();
-        if(!item.hasItemMeta() || !item.getItemMeta().hasDisplayName()) return name;
-
-        Component c = item.getItemMeta().displayName();
-        if(c == null) return name;
+    public static String getItemName(ItemStack item){
+        if(!item.hasItemMeta() || !item.getItemMeta().hasDisplayName()) return null;
 
         MiniMessage mm = MiniMessage.miniMessage();
-        name = mm.serialize(c);
+        Component component = item.getItemMeta().displayName();
+        if(component == null) return null;
 
-        return name;
+        return mm.serialize(component);
     }
 
-    public static boolean compareItemNames(ItemStack firstItem, ItemStack secondItem){
+    public static ItemStack toggleLockItemName(NamespacedKey key, ItemStack item){
 
-        String firstItemName = getItemName(firstItem);
-        String secondItemName = getItemName(secondItem);
 
-        Bukkit.getLogger().info(firstItemName);
-        Bukkit.getLogger().info(secondItemName);
+        ItemMeta itemMeta = item.getItemMeta();
+        PersistentDataContainer pdc = itemMeta.getPersistentDataContainer();
 
-        return firstItemName.equals(secondItemName);
+        boolean isLocked = true;
+
+        if(pdc.has(key, PersistentDataType.BOOLEAN))
+            isLocked = !pdc.get(key, PersistentDataType.BOOLEAN);
+
+        pdc.set(key, PersistentDataType.BOOLEAN, isLocked);
+
+        return item;
+    }
+
+    public static boolean isLocked(NamespacedKey key, ItemStack item){
+
+        ItemMeta itemMeta = item.getItemMeta();
+        PersistentDataContainer pdc = itemMeta.getPersistentDataContainer();
+
+        boolean isLocked = false;
+
+        if(pdc.has(key, PersistentDataType.BOOLEAN))
+            isLocked = !pdc.get(key, PersistentDataType.BOOLEAN);
+
+        return isLocked;
     }
 
 }
